@@ -8,3 +8,14 @@ tar  xzf  giraph -dist -1.1.0 - bin.tar.g
 7. export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 8. source  ~/. bashr
 9. giraph
+
+/---------------------------------------------------------------------
+[0 ,0 ,[[1 ,1] ,[3 ,3]]]
+[1 ,0 ,[[0 ,1] ,[2 ,2] ,[3 ,1]]]
+[2 ,0 ,[[1 ,2] ,[4 ,4]]]
+[3 ,0 ,[[0 ,3] ,[1 ,1] ,[4 ,4]]]
+[4 ,0 ,[[3 ,4] ,[2 ,4]]]
+/tmp/exampleGraph.txt
+[id_nodo,valor_nodo,[[id_nodo_destino, valor_conector],...]]
+para ejecutar vamos a una consola:
+giraph  $GIRAPH_HOME/giraph -examples -1.1.0. jar  org.apache.giraph.examples.SimpleShortestPathsComputation  -vif org.apache.giraph.io.formats.JsonLongDoubleFloatDoubleVertexInputFormat  -vip /tmp/exampleGraph.txt -vof  org.apache.giraph.io.formats.IdWithValueTextOutputFormat  -op /tmp/shortestpaths  -w 1 -ca  giraph.SplitMasterWorker=false
