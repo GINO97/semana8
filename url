@@ -2,3 +2,9 @@ https://giraph.apache.org/
 tar  xzf  giraph -dist -1.1.0 - bin.tar.g
 2. sudo mv giraph -1.1.0 -for -hadoop -1.2.1 /usr/local
 3. sudo  chown  -R cloudera /usr/local/giraph-1.1.0
+4. su  cloudera
+5. export  GIRAPH_HOME =/usr/local/giraph -1.1.0
+6. export  PATH=$PATH:$GIRAPH_HOME/bin
+7. export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+8. source  ~/. bashr
+9. giraph
