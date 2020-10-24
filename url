@@ -18,4 +18,4 @@ tar  xzf  giraph -dist -1.1.0 - bin.tar.g
 /tmp/exampleGraph.txt
 [id_nodo,valor_nodo,[[id_nodo_destino, valor_conector],...]]
 para ejecutar vamos a una consola:
-giraph  $GIRAPH_HOME/giraph -examples -1.1.0. jar  org.apache.giraph.examples.SimpleShortestPathsComputation  -vif org.apache.giraph.io.formats.JsonLongDoubleFloatDoubleVertexInputFormat  -vip /tmp/exampleGraph.txt -vof  org.apache.giraph.io.formats.IdWithValueTextOutputFormat  -op /tmp/shortestpaths  -w 1 -ca  giraph.SplitMasterWorker=false
+giraph /usr/local/giraph-1.1.0-hadoop2-for-hadoop-2.5.1/giraph-examples-1.1.0-hadoop2.jar org.apache.giraph.examples.SimpleShortestPathsComputation -vif org.apache.giraph.io.formats.JsonLongDoubleFloatDoubleVertexInputFormat -vip /tmp/inputGraph.txt -vof org.apache.giraph.io.formats.IdWithValueTextOutputFormat -op /tmp/shortestpaths -w 1 -ca  giraph.SplitMasterWorker=false
