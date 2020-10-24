@@ -1,1 +1,4 @@
 https://giraph.apache.org/
+tar  xzf  giraph -dist -1.1.0 - bin.tar.g
+2. sudo mv giraph -1.1.0 -for -hadoop -1.2.1 /usr/local
+3. sudo  chown  -R cloudera /usr/local/giraph-1.1.0
